@@ -1,0 +1,211 @@
+@charset "UTF-8";
+*{
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+ul,li{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.cart_header,.wrap,.shopping_title,.shopping_cartList,.shopping_count,.shopping_money,.shopping_none{
+    width: 1200px;
+    margin: auto;
+}
+.cart_logo,.cart_step{
+    background: url(../entry_register/cart_img.png)no-repeat;
+}
+.cart_header{
+    height: 46px;
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+
+.cart_logo{
+    float: left;
+    width: 414px;
+    height: 44px;
+    background-position: -15px -17px;
+}
+.cart_step{
+    float: right;
+    margin: 15px 2px 0;
+    width: 700px;
+    height: 31px;
+    background-position: -15px -89px;
+}
+
+.wrap{
+    height: auto;
+    overflow: hidden;
+    min-height: 300px;
+    padding: 10px 0;
+    margin-top: 10px;
+    /*background: #ccc;*/
+}
+.shopping{
+    border: 1px solid #DDDDDD;
+}
+.shopping_title{
+    height: 36px;
+    line-height: 36px;
+    background: url("../entry_register/cartbar2.png")no-repeat;
+}
+.cart_list{
+    float: left;
+    text-align: center;
+}
+
+.shopping_none{
+    height: 150px;
+}
+.shopping_cart{
+    width: 502px;
+    height: 108px;
+    margin: 20px auto;
+    overflow: hidden;
+}
+.cart_arrow{
+    width: 72px;
+    height: 89px;
+    float: left;
+    background: url("../entry_register/cart1.png")no-repeat;
+}
+.cart_arrow_txt{
+    float: left;
+    width: 81%;
+    margin: 25px 0 0 20px;
+}
+.cart_arrow_txt li{
+    height: 26px;
+}
+.cart_arrow_warn{
+    font-size: 18px;
+    color: #333333;
+}
+.go_shopping{
+    color: #C80A28;
+    font-size: 14px;
+    text-decoration: underline;
+}
+
+.div_deleted{
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    padding-top: 20px;
+    margin: 30px 0;
+}
+#show_del{
+    display: block;
+    border-bottom: 1px solid #DDDDDD;
+    padding-bottom: 5px;
+    font-weight: 500;
+}
+
+
+/******   加入购物车之后  *******/
+.shopping_cartList{
+    height: auto;
+    overflow:hidden;
+}
+
+.shopping_cartList li{
+    float: left;
+    width: 1095px;
+    height: 195px;
+    border-bottom: 1px solid #EAEAEA;
+}
+.shop_product,.shop_money,.shop_count,.shop_allMoney,.shop_del,.shop_message{
+    float: left;
+    height: 132px;
+    font-size: 12px;
+    text-align: center;
+    background: url("../entry_register/shopping_car_bg.png")no-repeat right;
+}
+.shop_product{
+    width: 367px;
+    height: auto;
+    margin-left: 15px;
+    padding-bottom: 10px;
+    text-align: left;
+}
+.shop_money,.shop_count{width: 132px}
+.shop_allMoney{width: 122px;font-size: 14px;color: #bf0000;line-height: 132px}
+.shop_del{width: 134px}
+.shop_message{width:184px;background: none;}
+
+.shop_product_pic{
+    float: left;
+    width: 114px;
+    height: auto;
+    border: 1px solid #DDDDDD;
+    margin: 10px 0 0 0;
+}
+.shop_product_pic img{width: 112px;height: 112px;}
+.shop_product_name{
+    margin: 10px 0 0 10px;
+    float: left;
+    display: inline;
+    width: 243px;
+    overflow: hidden;
+    font-size: 14px;
+}
+.shop_product_name a{width: 233px;height: auto;}
+.shop_money span{line-height: 20px;padding: 50px 0;font-size: 14px}
+.shop_del a,.shop_money span{line-height: 130px}
+
+.shop_count_num{position: relative;display: inline-block;margin: 51px 0;}
+.shop_count_num .increase,.shop_count_num .decrease{
+    float: left;
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    line-height: 12px;
+    text-align: center;
+    overflow: hidden;
+    cursor: pointer;
+    border: 1px solid #a7a6ab;
+    margin: 7px 0;
+    cursor: pointer;
+}
+.shop_count_num .increase{right: -20px;}
+.shop_count_num .decrease{left: -20px;}
+.shop_count_num input{
+    width: 36px;
+    height: 20px;
+    line-height: 20px;
+    margin-top: 3px;
+    text-align: center;
+    border: 1px solid #ccc;
+    color: #444;
+}
+
+.shop_del a{padding: 50px 0;color: #565656}
+
+/***    shopping_money      ***/
+.shopping_money{
+    height: 46px;
+    background: #ccc;
+}
+.shopping_continue,.shopping_buy{
+    background: url("../entry_register/cart_img.png") no-repeat;
+    margin-top: 12px;
+    margin-right: 10px;
+    height: 36px;
+    cursor: pointer;
+}
+.shopping_continue{
+    float: left;
+    width: 119px;
+    background-position: -16px -747px;
+}
+.shopping_buy{
+    float: right;
+    width: 157px;
+    background-position: -16px -361px;
+}
+
+/******   加入购物车之后  *******/

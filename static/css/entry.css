@@ -1,0 +1,167 @@
+@charset "UTF-8";
+*{
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+ul,li{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+#banner1{
+    width: 1100px;
+    height: 60px;
+    margin:0 auto;
+    margin-top: 10px;
+}
+#banner1 img{
+    width: 1100px;
+    height: 60px;
+}
+
+.entry{
+    width: 1100px;
+    height: 470px;
+    margin: auto;
+}
+
+.entry_left{
+    float: left;
+    width: 420px;
+    height: 315px;
+    margin-top: 40px;
+    margin-right: 40px;
+}
+.entry_left_pic{
+    width: 410px;
+    height: 290px;
+    padding-top: 25px;
+}
+
+.entry_right{
+    float: left;
+    width: 527px;
+    height: 470px;
+    padding-left: 80px;
+    border-left: 1px dashed #DDDDDD;
+}
+.login_form{
+    width: 300px;
+    height: 329px;
+    padding: 20px 40px;
+    margin-top: 25px;
+    box-shadow: 2px 1px 5px rgba(0,0,0,0.4);
+}
+.login_title{
+    width: 100%;
+    height: 30px;
+    line-height: 30px;
+    font-size: 19px;
+    border-bottom: 1px solid #eee;
+    color: #666666;
+}
+
+.user_login{
+    margin-top: 40px;
+    width: 300px;
+    height: 258px;
+    float: left;
+}
+.login_list{
+    width: 300px;
+    height: 272px;
+    float: left;
+}
+.login_list a{
+    text-decoration: underline;
+}
+
+.login_list li{
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    margin-top: 10px;
+}
+.span{
+    float: left;
+    width: 75px;
+    height: 33px;
+    line-height: 33px;
+    color: #393939;
+    text-align: right;
+}
+
+.login_txt{
+    width: 207px;
+    height: 33px;
+    line-height: 33px;
+    float: left;
+    color: #bbbbbb;
+    border: 1px solid #dedede;
+}
+#code{
+    float: left;
+    width: 122px;
+    height: 30px;
+    border: 1px solid #dedede;
+    margin-right: 5px;
+}
+.codes{
+    float: left;
+    width: 85px;
+    height: 32px;
+    line-height: 32px;
+    text-align: center;
+    background: #ededed;
+    cursor: pointer;
+}
+.login_error{
+    color: #C80A28;
+    margin: 10px 0;
+    width: 100%;
+    text-align: left;
+    float: left;
+    font-size: 12px;
+}
+.login_btn{
+    float: left;
+    width: 135px;
+    height: 35px;
+    background: #BE0929;
+    line-height: 35px;
+    color: #FFFFFF;
+    letter-spacing: 1px;
+    cursor: pointer;
+}
+.remember{
+    margin-left: 5px;
+}
+.login_other{
+    width: 528px;
+    height: 29px;
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+
+.login_other_title{
+    float: left;
+    height: 29px;
+    line-height: 29px;
+    font-size: 12px;
+}
+.login_other_btn{
+    float: left;
+}
+.login_btn1,.login_btn2,.login_btn3,.login_btn4{
+    width: 97px;
+    height: 29px;
+    margin-right: 10px;
+    float: left;
+    background: url("../entry_register/NEWS_login.png")no-repeat;
+}
+.login_btn1{background-position: 0 -528px;}
+.login_btn2{background-position: -111px -528px;}
+.login_btn3{background-position: -222px -528px;}
+.login_btn4{background-position: -333px -528px;}

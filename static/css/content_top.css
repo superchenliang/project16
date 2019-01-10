@@ -1,0 +1,255 @@
+*{
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+ul,li{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+#new_Arrival,#hd_logo_bottom,#hd_logo_top,#hd_logo,#void{
+    width: 1200px;
+    margin: auto;
+}
+
+/*   void  */
+#void{
+    height: 120px;
+    margin: 0 auto;
+}
+
+/*******   hd_logo    *********/
+#hd_logo{
+    height: 685px;
+    margin: 0 auto;
+}
+#hd_logo_top{
+    height: 345px;
+}
+.hd_top_left{
+    float: left;
+    width: 680px;
+    height: 337px;
+}
+.hd_top_left h2{
+    float: left;
+    width: 270px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+.hd_top_left a{
+    float: right;
+    width: 60px;
+    margin-top: 10px;
+}
+.divhuan{
+    cursor: pointer;
+}
+#business_logo{
+    width: 680px;
+    height: 335px;
+    background: #fff;
+}
+#business_logo ul{
+    float: left;
+    width: 677px;
+    height: 294px;
+    border-top: 1px solid #eeeeee;
+    border-left: 1px solid #eeeeee;
+}
+#business_logo li{
+    float: left;
+    padding: 8px 16px;
+    border-right: 1px solid #eeeeee;
+    border-bottom: 1px solid #eeeeee;
+}
+#business_logo li a{
+    width: 136px;
+    height: 56px;
+    margin: 0px;
+}
+
+/*                   */
+.hide_pic{
+    float: left;
+    width: 677px;
+    height: 294px;
+}
+
+
+/*                  */
+
+#hd_top_right{
+    float: right;
+    width: 500px;
+    height: 330px;
+    border: 1px solid #e7e7e7;
+}
+.con{
+    border-bottom: 2px solid #e3e3e3;
+    color: #333333;
+    height: 46px;
+    position: relative;
+    width: 100%;
+    border-bottom: 2px solid #e7e7e7;
+}
+.con li{
+    float: left;
+    height: 45px;
+    width: 120px;
+    text-align: center;
+}
+.con li a{
+    font-size: 18px;
+    line-height: 44px;
+}
+/****        on2        ****/
+.on2{
+    border-bottom: 2px solid #ff0f3f;
+}
+.on2 a{
+    color: #ff0f3f;
+}
+/****       on2  结束     ****/
+
+#hd_right_b{
+    width: 500px;
+    height: 282px;
+}
+.flower_item:first-child{
+    display: block;
+}
+.flower_item{
+    display: none;
+}
+.flower_list{
+    display: block;
+}
+.two{
+    width: 498px;
+    height: 260px;
+    margin: 14px 9px;
+}
+.two li span{
+    float: right;
+    margin-right: 10px;
+    font-size: 12px;
+    color: #666;
+}
+.one{
+    float: left;
+    width: 230px;
+    height: 258px;
+    margin: 14px 6px;
+}
+.one a img{
+    margin-bottom: 12px;
+}
+.one a,.two a{
+    padding-left: 9px;
+}
+.one li,.two li{
+    color: #ff0f3f;
+    margin-left: 6px;
+    height: 22px;
+    background: url("../imgs/dot.png") no-repeat 0 11px;
+}
+
+#hd_logo_bottom{
+    margin-top: 20px;
+    height: 315px;
+}
+
+/****                    new_Arrival                    ****/
+
+
+/***********        hover        **********/
+.hover2{
+    background: url("../imgs/goods_tab.png")no-repeat;
+    color: #FFFFFF;
+}
+
+#new_Arrival{
+    height: 340px;
+    margin-top: 20px;
+}
+#new_Arrival h1{
+    height:24px;
+    background: url("../imgs/web_index.png") no-repeat 0 -50px;
+    position: relative;
+    margin-bottom: 6px;
+}
+.tab_brand{
+    float: left;
+    margin-left: 230px;
+    width: 390px;
+    height: 22px;
+}
+.tab_brand li{
+    display: block;
+    float: left;
+    width: 77px;
+    height: 22px;
+    line-height: 22px;
+    text-align: center;
+    border-right: 1px solid #999;
+}
+.tab_brand li a{
+    float: left;
+    font-size: 12px;
+    width: 62px;
+    height: 22px;
+    line-height: 18px;
+    text-align: center;
+    margin: 0 5px;
+    padding: 0 5px;
+}
+.tab_brand li a span{
+    line-height: 18px;
+    text-align: center;
+}
+
+/*  tab_con */
+.tab_con{
+    width: 1220px;
+    display: block;
+    margin-top: 10px;
+}
+.new_boxs{
+    float: left;
+    width: 223px;
+    height: 300px;
+    margin-right: 21px;
+}
+.new_boxs a img{
+    display: block;
+    width: 223px;
+    height: 220px;
+}
+.tab_con ul{
+    width: 156px;
+    height: 62px;
+    margin: 0 33px;
+    padding-top: 10px;
+}
+.price{
+    text-align: center;
+}
+.new_price{
+    font-weight: bold;
+}
+.old_price{
+    font-size: 14px;
+}
+.buy_new{
+    text-align: center;
+    background: #FFFFFF;
+    margin:8px 0 0 45px;
+    border: 1px solid;
+    padding: 2px 5px;
+}
+
+
+

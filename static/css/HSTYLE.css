@@ -1,0 +1,416 @@
+*{
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+ul,li{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+#man,#mom,#girls,#child,#fashion{
+    width: 1200px;
+    height: 760px;
+    margin:10px auto;
+}
+
+.bg_con{
+    width: 1200px;
+    height: 425px;
+}
+
+/********************************/
+
+#woman{
+    width: 1200px;
+    margin: 10px auto;
+    height: 1067px;
+}
+#woman h1,#man h1,#mom h1,#girls h1,#child h1,#fashion h1{
+    height: 20px;
+    background: url("../imgs/web_index.png") no-repeat 0 -78px;
+    margin-bottom: 6px;
+}
+#man h1{
+    background: url("../imgs/web_index.png") no-repeat 0 -109px;
+}
+#mom h1{
+    background: url("../imgs/web_index.png") no-repeat 0 -140px;
+}
+#girls h1{
+    background: url("../imgs/web_index.png") no-repeat 0 -172px;
+}
+#child h1{
+    background: url("../imgs/web_index.png") no-repeat 0 -203px;
+}
+#fashion h1{
+    background: url("../imgs/web_index.png") no-repeat 0 -265px;
+}
+/* ************                     ******************  */
+.woman_list,.man_list,.mom_list,.girls_list,.child_list,.fashion_list{
+    float: right;
+    height: 20px;
+}
+.woman_list span,.man_list span,.mom_list span,.child_list span,.fashion_list span{
+    float: left;
+    font-size: 12px;
+    color: #999;
+    height: 20px;
+    line-height: 20px;
+}
+.woman_list a,.man_list a,.mom_list a,.girls_list a,.child_list a,.fashion_list a{
+    color: #999;
+    float: left;
+    padding: 0 15px;
+    height: 20px;
+    line-height: 20px;
+}
+/* ************                     ******************  */
+.w_img{
+    position: relative;
+    float: left;
+    width: 190px;
+    height: 255px;
+}
+.w_img a{
+    position: relative;
+    width: 190px;
+    height: 255px;
+}
+.info{
+    position: absolute;
+    font-size: 16px;
+    color: #FFFFFF;
+    background: rgba(132,212,189,0.9);
+    width: 170px;
+    height: 34px;
+    padding: 0 10px;
+    line-height: 34px;
+    left: 0px;
+    bottom: 0px;
+}
+.bg_left{
+    float: left;
+    width: 190px;
+    height: 425px;
+    margin-right: 6px;
+}
+.w_cate{
+    float: left;
+    width: 190px;
+    height: 170px;
+    background: #fafafa;
+}
+.w_cate1{
+    width: 150px;
+    height: 85px;
+    padding: 0 15px 10px 15px;
+    border-bottom: 1px dotted #666;
+}
+.w_cate1 a{
+    float: left;
+    width: auto;
+    height: 20px;
+    padding: 8px 10px 4px 0;
+}
+.w_cate2{
+    width: 150px;
+    height: 65px;
+    padding: 0 15px 10px 15px;
+}
+.w_cate2 span{
+    font-size: 12px;
+    color: #333;
+}
+.w_cate2 a{
+    float: left;
+    width: auto;
+    height: 20px;
+    padding: 8px 10px 4px 0;
+}
+
+.bg_middle{
+    float: left;
+    width: 790px;
+    height: 425px;
+    margin-right: 10px;
+}
+.woman_1,.woman_2,.woman_3{
+    float: left;
+}
+.woman_1{
+    margin-right: 10px;
+}
+.woman_2{
+    margin-bottom: 10px;
+}
+/**  bg_right  **/
+.bg_right{
+    float: left;
+    width: 178px;
+    height: 422px;
+    border: 1px solid #DDDDDD;
+    border-top: none;
+    padding: 0 11px;
+}
+.bg_right h4{
+    text-align: center;
+    font-size: 14px;
+    padding: 10px 0;
+    color: #c80a28;
+}
+.bg_con.bg_right ul{
+    float: left;
+    width: 178px;
+    height: 386px;
+}
+.bg_right ul li:first-child{border-top: 1px dashed #ddd;}
+.bg_right ul li{
+    width: 100%;
+    padding: 9px 0 10px 0;
+    border-top: solid 1px #ddd;
+    float: left;
+    cursor: pointer;
+    color: #333;
+    max-height: 114px;
+    line-height: 16px;
+}
+
+/*.bg_right ul li .arrow{
+    height: 16px;
+    float: left;
+    margin-right: 10px;
+}*/
+.bg_right ul li h5 .num1,.bg_right ul li h5 .num2,.bg_right ul li h5 .num3,.bg_right ul li h5 .num4,.bg_right ul li h5 .num5,.bg_right ul li h5 .num6,.bg_right ul li h5 .num7,.bg_right ul li h5 .num8{
+    width: 16px;
+    height: 16px;
+    float: left;
+    margin-right: 10px;
+}
+.bg_right ul li h5 .num1{background: url("../imgs/01.png")no-repeat}
+.bg_right ul li h5 .num2{background: url("../imgs/02.png")no-repeat}
+.bg_right ul li h5 .num3{background: url("../imgs/03.png")no-repeat}
+.bg_right ul li h5 .num4{background: url("../imgs/04.png")no-repeat}
+.bg_right ul li h5 .num5{background: url("../imgs/05.png")no-repeat}
+.bg_right ul li h5 .num6{background: url("../imgs/06.png")no-repeat}
+.bg_right ul li h5 .num7{background: url("../imgs/07.png")no-repeat}
+.bg_right ul li h5 .num8{background: url("../imgs/08.png")no-repeat}
+
+/*   隐藏 hot_con  */
+.hot_con{
+    float: left;
+    width: 100%;
+    height: 117px;
+    display: none;
+}
+
+.bg_right ul li .hot_con li{border: none}
+.hot_con .hot_img{
+    width: 80px;
+    float: left;
+    position: relative;
+    padding: 0;
+}
+.hot_img a img{width: 80px;height: 114px;float: left;}
+.hot_img .arrow{
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: url(../imgs/web_index.png) no-repeat -100px -298px;
+    width: 19px;
+    height: 25px;
+    line-height: 21px;
+    text-align: center;
+    color: #fff;
+}
+
+.hot_con .hot_info{
+    width: 90px;
+    float: right;
+    margin-top: 3px;
+    padding: 0;
+}
+.hot_con .hot_info p{
+    color: #333333;
+    line-height: 20px;
+    padding-bottom: 5px;
+}
+.hot_con .hot_info .hot_new_price{
+    color: #C80A28;
+    font-size: 16px;
+    float: left;
+}
+.hot_con .hot_info .hot_old_price{
+    color: #333333;
+    font-size: 14px;
+}
+
+
+/*****************************************/
+/********   men   ********/
+.bg_right1{
+    float: left;
+    width: 178px;
+    height: 422px;
+    padding: 0 5px;
+}
+.hstyle_top,.hstyle_bottom{
+    float: left;
+}
+.hstyle_top {
+    width: 200px;
+    height: 253px;
+    margin-bottom: 10px;
+}
+.hstyle_bottom{
+    width: 200px;
+    height: 160px;
+}
+
+/******        girls      **********/
+.hstyle_top1,.hstyle_middle1{
+    width: 200px;
+    height: 135px;
+    margin-bottom: 8px;
+}
+.hstyle_bottom1{
+    width: 200px;
+    height: 135px;
+}
+.hstyle_top2{
+    width: 200px;
+    height: 423px;
+}
+
+/*********         ͼƬ����          *********/
+
+/* a  */
+#banner{
+    width: 1200px;
+    height: 95px;
+    margin: 20px auto;
+}
+
+/***********      ������Ѷ      ***********/
+#news{
+    width: 1200px;
+    height: 355px;
+    margin: 10px auto;
+}
+.news_list{
+    height: 35px;
+    border-bottom: 1px solid #dddddd;
+    margin-bottom: 10px;
+}
+.news_list h2{
+    float: left;
+    height: 35px;
+    line-height: 45px;
+}
+.more{
+    float: right;
+    height: 35px;
+    line-height: 40px;
+}
+.news_left{
+    float: left;
+    position: relative;
+    width: 350px;
+    height: 280px;
+}
+.news_pic{
+    float: left;
+    position: absolute;
+}
+.news_words{
+    float: left;
+    position: absolute;
+    width: 350px;
+    height: 30px;
+    line-height: 40px;
+    color: #FFFFFF;
+    background: #000;
+    opacity: 0.6;
+    bottom: 0;
+}
+.news_pic img{
+    float: left;
+    width: 350px;
+}
+.bold{
+    position: absolute;
+    bottom: 7px;
+    right: 5px;
+    float: right;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: #C80A28;
+}
+.news_middle{
+    position: relative;
+    float: left;
+    width: 350px;
+    height: 280px;
+    margin-left: 30px;
+}
+.news_middle ul{
+    margin-bottom: 10px;
+}
+.new_fashionPic img{
+    position: absolute;
+    width: 100px;
+    top: 0px;
+    left: 250px;
+}
+.news_middle li{margin: 5px 0;height: auto;overflow: hidden}
+.news_middle h3{height: 15px;margin: 10px 0;}
+.news_middle h4{
+    width: 240px;
+    height: 20px;
+    float: left;
+    font-size: 14px;
+    color: #666;
+}
+.news_middle h4 a{float: left;height: 15px;overflow: hidden;font-size: 14px}
+.news_middle p{
+    width: 230px;
+    float: left;
+    color: #999;
+    height: auto;
+    overflow: hidden;
+    font-size: 14px;
+}
+.news_right{
+    position: relative;
+    float: left;
+    width: 430px;
+    height: 300px;
+    margin-top: 8px;
+    margin-left: 33px;
+    background: url("../imgs/news_right_bg.png")no-repeat;
+}
+.dy{
+    position: absolute;
+    bottom: 35px;
+    width: 340px;
+    height: 27px;
+    left: 5px;
+}
+.dy input{
+    float: left;
+    width: 250px;
+    height: 25px;
+    border: 1px solid #DDDDDD;
+    font-size: 14px;
+    color: #666666;
+}
+.dy button{
+    float: left;
+    display: block;
+    width: 70px;
+    height: 22px;
+    margin: 2px 8px;
+    background: url("../imgs/news_right_btn.png")no-repeat;
+    cursor: pointer;
+}

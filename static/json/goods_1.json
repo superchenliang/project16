@@ -1,0 +1,117 @@
+[
+  {
+      "id":"01",
+      "img":"img/new/new_01.jpg",
+      "goodsImg":{
+          "big" : [
+              {"img":"img/new/01/new_1.jpg"},
+              {"img":"img/new/02/new_2.jpg"},
+              {"img":"img/new/03/new_3.jpg"},
+              {"img":"img/new/04/new_4.jpg"},
+              {"img":"img/new/05/new_5.jpg"}
+          ],
+          "small" : [
+              {"img" :"img/new/01/new_1_01.jpg"},
+              {"img" :"img/new/01/new_1_02.jpg"},
+              {"img" :"img/new/01/new_1_03.jpg"},
+              {"img" :"img/new/01/new_1_04.jpg"},
+              {"img" :"img/new/01/new_1_05.jpg"}
+          ]
+      },
+      "name":"Soneed韩版2016秋装新款女装宽松立领拼接拉链雪纺衫UE6044皛0816",
+      "price":"129.00",
+      "num":1
+  },
+  {
+      "id":"02",
+      "img":"img/new/new_02.jpg",
+      "goodsImg":{
+          "big" : [
+              {"img":"img/new/01/new_1.jpg"},
+              {"img":"img/new/02/new_2.jpg"},
+              {"img":"img/new/03/new_3.jpg"},
+              {"img":"img/new/04/new_4.jpg"},
+              {"img":"img/new/05/new_5.jpg"}
+          ],
+          "small" : [
+              {"img" :"img/new/02/new_2_01.jpg"},
+              {"img" :"img/new/02/new_2_02.jpg"},
+              {"img" :"img/new/02/new_2_03.jpg"},
+              {"img" :"img/new/02/new_2_04.jpg"},
+              {"img" :"img/new/02/new_2_05.jpg"}
+            ]
+      },
+      "name":"女装黑色青年时尚通勤纯色蕾丝高腰V领短袖连衣裙UD4225【Soneed 2016夏装新品】",
+      "price":"668.00",
+      "num":1
+  },
+  {
+      "id":"03",
+      "img":"img/new/new_03.jpg",
+      "goodsImg":{
+          "big" : [
+              {"img":"img/new/01/new_1.jpg"},
+              {"img":"img/new/02/new_2.jpg"},
+              {"img":"img/new/03/new_3.jpg"},
+              {"img":"img/new/04/new_4.jpg"},
+              {"img":"img/new/05/new_5.jpg"}
+          ],
+          "small" : [
+              {"img" :"img/new/03/new_3_01.jpg"},
+              {"img" :"img/new/03/new_3_02.jpg"},
+              {"img" :"img/new/03/new_3_03.jpg"},
+              {"img" :"img/new/03/new_3_04.jpg"},
+              {"img" :"img/new/03/new_3_05.jpg"}
+          ]
+      },
+      "name":"Soneed韩版2016秋装新款女装低腰毛边磨皮开叉牛仔裤UE6161皛0816",
+      "price":"138.00",
+      "num":1
+  },
+  {
+      "id":"04",
+      "img":"img/new/new_04.jpg",
+      "goodsImg":{
+          "big" : [
+              {"img":"img/new/01/new_1.jpg"},
+              {"img":"img/new/02/new_2.jpg"},
+              {"img":"img/new/03/new_3.jpg"},
+              {"img":"img/new/04/new_4.jpg"},
+              {"img":"img/new/05/new_5.jpg"}
+          ],
+          "small" : [
+              {"img" :"img/new/04/new_4_01.jpg"},
+              {"img" :"img/new/04/new_4_02.jpg"},
+              {"img" :"img/new/04/new_4_03.jpg"},
+              {"img" :"img/new/04/new_4_04.jpg"},
+              {"img" :"img/new/04/new_4_05.jpg"}
+          ]
+      },
+      "name":"女装 多色可选OL撞色韩版通勤夏季新品简洁薄款无袖不对称口袋装饰气质百搭雪纺衫UE2190【Soneed 2016夏装新品】",
+      "price":"228.00",
+      "num":1
+  },
+  {
+      "id":"05",
+      "img":"img/new/new_05.jpg",
+      "goodsImg":{
+          "big" : [
+              {"img":"img/new/01/new_1.jpg"},
+              {"img":"img/new/02/new_2.jpg"},
+              {"img":"img/new/03/new_3.jpg"},
+              {"img":"img/new/04/new_4.jpg"},
+              {"img":"img/new/05/new_5.jpg"}
+          ],
+          "small" : [
+              {"img" :"img/new/05/new_5_01.jpg"},
+              {"img" :"img/new/05/new_5_02.jpg"},
+              {"img" :"img/new/05/new_5_03.jpg"},
+              {"img" :"img/new/05/new_5_04.jpg"},
+              {"img" :"img/new/05/new_5_05.jpg"}
+          ]
+      },
+      "name":"Soneed韩版2016秋装新款女装毛边破洞直筒低腰牛仔裤UE6162皛0809",
+      "price":"278.00",
+      "num":1
+  }
+]

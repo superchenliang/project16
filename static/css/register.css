@@ -1,0 +1,139 @@
+@charset "UTF-8";
+*{
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+ul,li{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+#banner1{
+    width: 1100px;
+    height: 60px;
+    margin:0 auto;
+    margin-top: 10px;
+}
+#banner1 img{
+    width: 1100px;
+    height: 60px;
+}
+/******  register  *******/
+#register{
+    width: 1100px;
+    height: 500px;
+    margin: 0 auto;
+    margin-top: 40px;
+}
+
+.register_left{
+    float: left;
+    width: 360px;
+    height: 400px;;
+    margin: 40px 0 0 30px;
+}
+.register_right{
+    float: left;
+    width: 609px;
+    height:470px;
+    padding-left: 50px;
+    margin: 30px 0 0 50px;
+    border-left: 1px dashed #DDDDDD;
+}
+.register_right li{
+    width: 580px;
+    height: 35px;
+    margin: 20px 0;
+}
+
+.register_right span{
+    float: left;
+    width: 115px;
+    height: 33px;
+    text-align: right;
+    line-height: 33px;
+}
+.register_right input{
+    float: left;
+    width: 210px;
+    height: 33px;
+    margin-left: 20px;
+    border: 1px solid #DDDDDD;
+    border-radius: 5px;
+}
+.register_right p{
+    float: left;
+    width: 220px;
+    height: 35px;
+    line-height: 35px;
+    font-size: 12px;
+    color: #C80A28;
+}
+#code{
+    float: left;
+    width: 100px;
+    height: 33px;
+    border-radius: 5px;
+    border: 1px solid #DDDDDD;
+}
+.identifying_code{
+    float: left;
+    width: 100px;
+    height: 33px;
+    border: 1px solid #DDDDDD;
+    margin-left: 10px;
+    text-align: center;
+    line-height: 33px;
+    font-size: 20px;
+}
+#btn{
+    margin-left: 170px;
+    margin-top: 50px;
+    width: 120px;
+    height: 35px;
+    border-radius: 5px;
+    background: #C80A28;
+    color: #FFFFFF;
+    font-size: 20px;
+}
+.register_list{
+    float: left;
+    height: 45px;
+    font-size: 13px;
+    line-height: 45px;
+}
+#btn_entry{
+    background: url("../entry_register/NEWS_login.png") no-repeat -347px -211px;
+    width: 103px;
+    height: 30px;
+    color: #FFFFFF;
+    font-size: 16px;
+    margin: 8px 0 0 10px;
+    cursor: pointer;
+}
+.register_logo{
+    float: left;
+    width: 370px;
+    height: 250px;
+}
+.register_buy{
+    float: left;
+    width: 370px;
+    height: 95px;
+    margin-top: 8px;
+}
+.register_buy input{
+    width: 250px;
+    height: 25px;
+    border: 1px solid #DDDDDD;
+}
+.buy{
+    float: right;
+    background: url("../entry_register/footer00.png") no-repeat ;
+    width: 70px;
+    height: 22px;
+    margin-right: 30px;
+}
+
