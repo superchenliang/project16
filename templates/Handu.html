@@ -1,26 +1,28 @@
-﻿<!DOCTYPE html>
+﻿{% load static %}
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>韩都衣舍</title>
 
-    <link href="css/Han%20Yi%20Han.css" type="text/css" rel="stylesheet" />
-    <link href="css/content_top.css" type="text/css" rel="stylesheet" />
-    <link href="css/fixed_box.css" type="text/css" rel="stylesheet" />
-    <link href="css/bg_carousel.css" type="text/css" rel="stylesheet" />
-    <link href="css/HSTYLE.css" type="text/css" rel="stylesheet" />
+    <link href="{% static 'css/Han Yi Han.css' %}" type="text/css" rel="stylesheet"/>
+    <link href="{% static 'css/content_top.css' %}" type="text/css" rel="stylesheet"/>
+    <link href="{% static 'css/fixed_box.css' %}" type="text/css" rel="stylesheet"/>
+    <link href="{% static 'css/bg_carousel.css' %}" type="text/css" rel="stylesheet"/>
+    <link href="{% static 'css/HSTYLE.css' %}" type="text/css" rel="stylesheet"/>
 
 
     <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.8.0.js"></script>
 
-    <script src="js/home.js"></script>
-    <script src="js/bg_carousel.js"></script>
-    <script src="js/fixed.js"></script>
-    <script src="js/jquery.cookie.js"></script>
+    <script src="{% static 'js/home.js' %}"></script>
+    <script src="{% static 'js/bg_carousel.js' %}"></script>
+    <script src="{% static 'js/fixed.js' %}"></script>
+    <script src="{% static 'js/jquery.cookie.js' %}"></script>
+{#    <script src="{% static 'js/myhome.js' %}"></script>#}
+
 
 </head>
 <body>
-
 
 
 <!---------------------  top 顶部  ----------------------->
@@ -28,7 +30,7 @@
     <div id="H_top">
         <div id="top_left">
             <ul id="top_left_ul">
-                <li><a  href="Handu.html" class="on" target="_blank">返回首页</a></li>
+                <li><a href="Handu.html" class="on" target="_blank">返回首页</a></li>
                 <li><a href="#">收藏网站</a></li>
             </ul>
         </div>
@@ -36,8 +38,8 @@
         <div id="top_right">
             <ul id="H_top_1">
                 <li><a href="#">您好,欢迎光临韩都衣舍！</a></li>
-                <li><a href="entry.html" target="_blank">登录</a></li>
-                <li><a href="register.html" target="_blank" style="color: #C80A28">注册</a></li>
+                <li><a href="{% url 'app:entry' %}" target="_blank">登录</a></li>
+                <li><a href="{% url 'app:register' %}" target="_blank" style="color: #C80A28">注册</a></li>
                 <li><a href="cart.html" target="_blank">购物车</a></li>
             </ul>
             <ul id="H_top_2">
@@ -50,7 +52,7 @@
     </div>
 
     <!---   网站导航   --->
-    <div class="wzdhBox">
+    <div class="wzdhBox" style="display: none;">
         <div class="wzdh_box">
             <div class="hot">
                 <h1>大家都在买<span>Hot</span></h1>
@@ -117,8 +119,8 @@
 
         <div id="search">
             <div class="form_search">
-                <input type="text" class="text" name="keywords" />
-                <input type="submit" value="搜索" class="button"  />
+                <input type="text" class="text" name="keywords">
+                <input type="submit" value="搜索" class="button">
             </div>
             <div class="hotwords">
                 <a href="#" target="_blank">韩风童装</a>
@@ -131,7 +133,7 @@
         </div>
 
         <div class="ewm">
-            <img src="imgs/ewm.png" />
+            <img src="{% static 'imgs/ewm.png' %}">
             <span>下载APP即送好礼</span>
         </div>
 
@@ -143,17 +145,17 @@
 <div id="nav">
     <div id="menu">
         <ul>
-            <li class="menu_left"><a href="#">2016秋冬新品</a> </li>
-            <li class="menu_left"><a href="#">会员专享</a> </li>
-            <li class="menu_left"><a href="#">团购批发</a> </li>
+            <li class="menu_left"><a href="#">2016秋冬新品</a></li>
+            <li class="menu_left"><a href="#">会员专享</a></li>
+            <li class="menu_left"><a href="#">团购批发</a></li>
 
-            <li class="menu_right"><a href="#">招兵买马</a> </li>
+            <li class="menu_right"><a href="#">招兵买马</a></li>
             <!--  下拉菜单  -->
             <li class="menu_right">
                 <a href="#">韩都资讯
-                    <img src="imgs/sjt.png" />
+                    <img src="{% static 'imgs/sjt.png' %}">
                 </a>
-                <div id="consult" class="member">
+                <div id="consult" class="member" style="display: none;">
                     <ul>
                         <li style="border-bottom: 1px solid #f2f2f2"><a href="#">韩都设计</a></li>
                         <li><a href="#">品牌故事</a></li>
@@ -162,9 +164,9 @@
             </li>
             <li class="menu_right">
                 <a href="#">会员俱乐部
-                    <img src="imgs/sjt.png" />
+                    <img src="{% static 'imgs/sjt.png' %}">
                 </a>
-                <div id="member" class="member">
+                <div id="member" class="member" style="display: none;">
                     <ul>
                         <li><a href="#">韩都真人秀</a></li>
                         <li><a href="#">好评有礼</a></li>
@@ -194,75 +196,106 @@
         <!--   左边   -->
         <div class="hd_top_left">
             <h2>互联网品牌生态运营集团</h2>
-            <a class="divhuan"><img src="carousel_img/bt.png" /> 换一批</a>
+            <a class="divhuan"><img src="{% static 'carousel_img/bt.png' %}"> 换一批</a>
             <div id="business_logo">
-                <div class="hide_pic">
+                <div class="hide_pic" style="display: none;">
                     <ul>
                         <li>
-                            <a href="#" target="_blank" class="pic1"><img src="carousel_img/NA.jpg" /></a>
+                            <a href="#" target="_blank" class="pic1"><img src="{% static 'carousel_img/NA.jpg' %}"></a>
                             <!--<a href="#" target="_blank" class="pic1"><img src="carousel_img/NA-.jpg" /></a>-->
                         </li>
-                        <li><a href="#" target="_blank" class="pic2"><img src="carousel_img/LAOLA.jpg" /></a></li>
-                        <li><a href="#" target="_blank" class="pic3"><img src="carousel_img/DKN.jpg" /></a></li>
-                        <li><a href="#" target="_blank" class="pic4"><img src="carousel_img/BLY.jpg" /></a></li>
-                        <li><a href="#" target="_blank" class="pic5"><img src="carousel_img/cx.jpg" /></a></li>
-                        <li><a href="#" target="_blank" class="pic6"><img src="carousel_img/FQ.jpg" /></a></li>
-                        <li><a href="#" target="_blank" class="pic7"><img src="carousel_img/H.jpg" /></a></li>
-                        <li><a href="#" target="_blank" class="pic8"><img src="carousel_img/NBS.jpg" /></a></li>
-                        <li><a href="#" target="_blank" class="pic9"><img src="carousel_img/Sn.jpg" /></a></li>
-                        <li><a href="#" target="_blank" class="pic10"><img src="carousel_img/YT.jpg" /></a></li>
-                        <li><a href="#" target="_blank" class="pic11"><img src="carousel_img/AMH.jpg" /></a></li>
-                        <li><a href="#" target="_blank" class="pic12"><img src="carousel_img/ANMA.jpg" /></a></li>
-                        <li><a href="#" target="_blank" class="pic13"><img src="carousel_img/pig.jpg" /></a></li>
-                        <li><a href="#" target="_blank" class="pic14"><img src="carousel_img/zc.jpg" /></a></li>
-                        <li><a href="#" target="_blank" class="pic15"><img src="carousel_img/kui.jpg" /></a></li>
-                        <li><a href="#" target="_blank" class="pic16"><img src="carousel_img/3u.jpg" /></a></li>
+                        <li><a href="#" target="_blank" class="pic2"><img
+                                src="{% static 'carousel_img/LAOLA.jpg' %}"></a></li>
+                        <li><a href="#" target="_blank" class="pic3"><img src="{% static 'carousel_img/DKN.jpg' %}"></a>
+                        </li>
+                        <li><a href="#" target="_blank" class="pic4"><img src="{% static 'carousel_img/BLY.jpg' %}"></a>
+                        </li>
+                        <li><a href="#" target="_blank" class="pic5"><img src="{% static 'carousel_img/cx.jpg' %}"></a>
+                        </li>
+                        <li><a href="#" target="_blank" class="pic6"><img src="{% static 'carousel_img/FQ.jpg' %}"></a>
+                        </li>
+                        <li><a href="#" target="_blank" class="pic7"><img src="{% static 'carousel_img/H.jpg' %}"></a>
+                        </li>
+                        <li><a href="#" target="_blank" class="pic8"><img src="{% static 'carousel_img/NBS.jpg' %}"></a>
+                        </li>
+                        <li><a href="#" target="_blank" class="pic9"><img src="{% static 'carousel_img/Sn.jpg' %}"></a>
+                        </li>
+                        <li><a href="#" target="_blank" class="pic10"><img src="{% static 'carousel_img/YT.jpg' %}"></a>
+                        </li>
+                        <li><a href="#" target="_blank" class="pic11"><img
+                                src="{% static 'carousel_img/AMH.jpg' %}"></a></li>
+                        <li><a href="#" target="_blank" class="pic12"><img
+                                src="{% static 'carousel_img/ANMA.jpg' %}"></a></li>
+                        <li><a href="#" target="_blank" class="pic13"><img
+                                src="{% static 'carousel_img/pig.jpg' %}"></a></li>
+                        <li><a href="#" target="_blank" class="pic14"><img src="{% static 'carousel_img/zc.jpg' %}"></a>
+                        </li>
+                        <li><a href="#" target="_blank" class="pic15"><img
+                                src="{% static 'carousel_img/kui.jpg' %}"></a></li>
+                        <li><a href="#" target="_blank" class="pic16"><img src="{% static 'carousel_img/3u.jpg' %}"></a>
+                        </li>
                     </ul>
                 </div>
 
 
-                <div class="hide_pic">
+                <div class="hide_pic" style="display: none;">
                     <ul>
-                        <li><a href="#" target="_blank" class="pic1"><img src="carousel_img/mn.jpg" /></a></li>
-                        <li><a href="#" target="_blank" class="pic2"><img src="carousel_img/ZG.jpg" /></a></li>
-                        <li><a href="#" target="_blank" class="pic13"><img src="carousel_img/pig.jpg" /></a></li>
-                        <li><a href="#" target="_blank" class="pic3"><img src="carousel_img/SL.jpg" /></a></li>
-                        <li><a href="#" target="_blank" class="pic4"><img src="carousel_img/gy.jpg" /></a></li>
-                        <li><a href="#" target="_blank" class="pic5"><img src="carousel_img/lww.jpg" /></a></li>
-                        <li><a href="#" target="_blank" class="pic12"><img src="carousel_img/ANMA.jpg" /></a></li>
-                        <li><a href="#" target="_blank" class="pic6"><img src="carousel_img/hw.jpg" /></a></li>
-                        <li><a href="#" target="_blank" class="pic7"><img src="carousel_img/H.jpg" /></a></li>
-                        <li><a href="#" target="_blank" class="pic15"><img src="carousel_img/kui.jpg" /></a></li>
-                        <li><a href="#" target="_blank" class="pic16"><img src="carousel_img/3u.jpg" /></a></li>
-                        <li><a href="#" target="_blank" class="pic8"><img src="carousel_img/NBS.jpg" /></a></li>
-                        <li><a href="#" target="_blank" class="pic9"><img src="carousel_img/Sn.jpg" /></a></li>
-                        <li><a href="#" target="_blank" class="pic10"><img src="carousel_img/YT.jpg" /></a></li>
-                        <li><a href="#" target="_blank" class="pic11"><img src="carousel_img/AMH.jpg" /></a></li>
-                        <li><a href="#" target="_blank" class="pic14"><img src="carousel_img/zc.jpg" /></a></li>
+                        <li><a href="#" target="_blank" class="pic1"><img src="{% static 'carousel_img/mn.jpg' %}"></a>
+                        </li>
+                        <li><a href="#" target="_blank" class="pic2"><img src="{% static 'carousel_img/ZG.jpg' %}"></a>
+                        </li>
+                        <li><a href="#" target="_blank" class="pic13"><img
+                                src="{% static 'carousel_img/pig.jpg' %}"></a></li>
+                        <li><a href="#" target="_blank" class="pic3"><img src="{% static 'carousel_img/SL.jpg' %}"></a>
+                        </li>
+                        <li><a href="#" target="_blank" class="pic4"><img src="{% static 'carousel_img/gy.jpg' %}"></a>
+                        </li>
+                        <li><a href="#" target="_blank" class="pic5"><img src="{% static 'carousel_img/lww.jpg' %}"></a>
+                        </li>
+                        <li><a href="#" target="_blank" class="pic12"><img
+                                src="{% static 'carousel_img/ANMA.jpg' %}"></a></li>
+                        <li><a href="#" target="_blank" class="pic6"><img src="{% static 'carousel_img/hw.jpg' %}"></a>
+                        </li>
+                        <li><a href="#" target="_blank" class="pic7"><img src="{% static 'carousel_img/H.jpg' %}"></a>
+                        </li>
+                        <li><a href="#" target="_blank" class="pic15"><img
+                                src="{% static 'carousel_img/kui.jpg' %}"></a></li>
+                        <li><a href="#" target="_blank" class="pic16"><img src="{% static 'carousel_img/3u.jpg' %}"></a>
+                        </li>
+                        <li><a href="#" target="_blank" class="pic8"><img src="{% static 'carousel_img/NBS.jpg' %}"></a>
+                        </li>
+                        <li><a href="#" target="_blank" class="pic9"><img src="{% static 'carousel_img/Sn.jpg' %}"></a>
+                        </li>
+                        <li><a href="#" target="_blank" class="pic10"><img src="{% static 'carousel_img/YT.jpg' %}"></a>
+                        </li>
+                        <li><a href="#" target="_blank" class="pic11"><img
+                                src="{% static 'carousel_img/AMH.jpg' %}"></a></li>
+                        <li><a href="#" target="_blank" class="pic14"><img src="{% static 'carousel_img/zc.jpg' %}"></a>
+                        </li>
                     </ul>
                 </div>
 
                 <!--<div class="hide_pic">-->
-                    <!--<ul>-->
-                        <!--<li><a href="#" target="_blank" class="pic1"><img src="carousel_img/NA-.jpg" /></a></li>-->
-                        <!--<li><a href="#" target="_blank" class="pic2"><img src="carousel_img/LAOLA-.jpg" /></a></li>-->
-                        <!--<li><a href="#" target="_blank" class="pic3"><img src="carousel_img/DKN-.jpg" /></a></li>-->
-                        <!--<li><a href="#" target="_blank" class="pic4"><img src="carousel_img/BLY-.jpg" /></a></li>-->
-                        <!--<li><a href="#" target="_blank" class="pic5"><img src="carousel_img/cx-.jpg" /></a></li>-->
-                        <!--<li><a href="#" target="_blank" class="pic6"><img src="carousel_img/FQ-.jpg" /></a></li>-->
-                        <!--<li><a href="#" target="_blank" class="pic7"><img src="carousel_img/H-.jpg" /></a></li>-->
-                        <!--<li><a href="#" target="_blank" class="pic8"><img src="carousel_img/NBS-.jpg" /></a></li>-->
-                        <!--<li><a href="#" target="_blank" class="pic9"><img src="carousel_img/Sn-.jpg" /></a></li>-->
-                        <!--<li><a href="#" target="_blank" class="pic10"><img src="carousel_img/YT-.jpg" /></a></li>-->
-                        <!--<li><a href="#" target="_blank" class="pic11"><img src="carousel_img/AMH-.jpg" /></a></li>-->
-                        <!--<li><a href="#" target="_blank" class="pic12"><img src="carousel_img/ANMA-.jpg" /></a></li>-->
-                        <!--<li><a href="#" target="_blank" class="pic13"><img src="carousel_img/pig.jpg" /></a></li>-->
-                        <!--<li><a href="#" target="_blank" class="pic14"><img src="carousel_img/zc-.jpg" /></a></li>-->
-                        <!--<li><a href="#" target="_blank" class="pic15"><img src="carousel_img/kui-.jpg" /></a></li>-->
-                        <!--<li><a href="#" target="_blank" class="pic16"><img src="carousel_img/3u.jpg" /></a></li>-->
-                    <!--</ul>-->
+                <!--<ul>-->
+                <!--<li><a href="#" target="_blank" class="pic1"><img src="carousel_img/NA-.jpg" /></a></li>-->
+                <!--<li><a href="#" target="_blank" class="pic2"><img src="carousel_img/LAOLA-.jpg" /></a></li>-->
+                <!--<li><a href="#" target="_blank" class="pic3"><img src="carousel_img/DKN-.jpg" /></a></li>-->
+                <!--<li><a href="#" target="_blank" class="pic4"><img src="carousel_img/BLY-.jpg" /></a></li>-->
+                <!--<li><a href="#" target="_blank" class="pic5"><img src="carousel_img/cx-.jpg" /></a></li>-->
+                <!--<li><a href="#" target="_blank" class="pic6"><img src="carousel_img/FQ-.jpg" /></a></li>-->
+                <!--<li><a href="#" target="_blank" class="pic7"><img src="carousel_img/H-.jpg" /></a></li>-->
+                <!--<li><a href="#" target="_blank" class="pic8"><img src="carousel_img/NBS-.jpg" /></a></li>-->
+                <!--<li><a href="#" target="_blank" class="pic9"><img src="carousel_img/Sn-.jpg" /></a></li>-->
+                <!--<li><a href="#" target="_blank" class="pic10"><img src="carousel_img/YT-.jpg" /></a></li>-->
+                <!--<li><a href="#" target="_blank" class="pic11"><img src="carousel_img/AMH-.jpg" /></a></li>-->
+                <!--<li><a href="#" target="_blank" class="pic12"><img src="carousel_img/ANMA-.jpg" /></a></li>-->
+                <!--<li><a href="#" target="_blank" class="pic13"><img src="carousel_img/pig.jpg" /></a></li>-->
+                <!--<li><a href="#" target="_blank" class="pic14"><img src="carousel_img/zc-.jpg" /></a></li>-->
+                <!--<li><a href="#" target="_blank" class="pic15"><img src="carousel_img/kui-.jpg" /></a></li>-->
+                <!--<li><a href="#" target="_blank" class="pic16"><img src="carousel_img/3u.jpg" /></a></li>-->
+                <!--</ul>-->
                 <!--</div>-->
-             </div>
+            </div>
 
         </div>
 
@@ -281,7 +314,7 @@
                 <div class="flower_list">
                     <div class="flower_item">
                         <div class="one">
-                            <a href="#"><img src="img/230_1.jpg" /></a>
+                            <a href="#"><img src="{% static 'img/230_1.jpg' %}"></a>
                             <ul>
                                 <li><a href="#">韩都衣舍签约亚洲女神朴信惠</a></li>
                                 <li><a href="#">签约朴信惠，韩都衣舍将要做什么？</a></li>
@@ -289,7 +322,7 @@
                             </ul>
                         </div>
                         <div class="one">
-                            <a href="#"><img src="img/12.jpg" /></a>
+                            <a href="#"><img src="{% static 'img/12.jpg' %}"></a>
                             <ul>
                                 <li><a href="#">韩都衣舍签约亚洲女神朴信惠</a></li>
                                 <li><a href="#">签约朴信惠，韩都衣舍将要做什么？</a></li>
@@ -300,7 +333,7 @@
 
                     <div class="flower_item">
                         <div class="two">
-                            <a href="#"><img src="img/qy1.jpg" /></a>
+                            <a href="#"><img src="{% static 'img/qy1.jpg' %}"></a>
                             <ul>
                                 <li><a href="#">韩都衣舍签约亚洲女神朴信惠</a><span>[详细内容]</span></li>
                                 <li><a href="#">签约朴信惠，韩都衣舍将要做什么？</a><span>[详细内容]</span></li>
@@ -311,7 +344,7 @@
 
                     <div class="flower_item">
                         <div class="one">
-                            <a href="#"><img src="img/xp.jpg" /></a>
+                            <a href="#"><img src="{% static 'img/xp.jpg' %}"></a>
                             <ul>
                                 <li><a href="#">韩都衣舍签约亚洲女神朴信惠</a></li>
                                 <li><a href="#">签约朴信惠，韩都衣舍将要做什么？</a></li>
@@ -319,7 +352,7 @@
                             </ul>
                         </div>
                         <div class="one">
-                            <a href="#"><img src="img/051.jpg" /></a>
+                            <a href="#"><img src="{% static 'img/051.jpg' %}"></a>
                             <ul>
                                 <li><a href="#">韩都衣舍签约亚洲女神朴信惠</a></li>
                                 <li><a href="#">签约朴信惠，韩都衣舍将要做什么？</a></li>
@@ -330,7 +363,7 @@
 
                     <div class="flower_item">
                         <div class="two">
-                            <a href="#"><img src="img/commonweal_top.jpg" /></a>
+                            <a href="#"><img src="{% static 'img/commonweal_top.jpg' %}"></a>
                             <ul>
                                 <li><a href="#">韩都衣舍签约亚洲女神朴信惠</a><span>[详细内容]</span></li>
                                 <li><a href="#">签约朴信惠，韩都衣舍将要做什么？</a><span>[详细内容]</span></li>
@@ -346,7 +379,7 @@
     </div>
 
     <div id="hd_logo_bottom">
-        <img src="img/bg_1.jpg" />
+        <img src="{% static 'img/bg_1.jpg' %}">
     </div>
 
 </div>
@@ -387,7 +420,7 @@
             <a href="#">连衣裙</a>
             <a href="#">牛仔裤</a>
             <a href="#">休闲裤</a>
-            <a href="#">更多<img src="imgs/leftjt.png" /></a>
+            <a href="#">更多<img src="{% static 'imgs/leftjt.png' %}"></a>
         </div>
     </h1>
     <div class="bg_con">
@@ -395,7 +428,7 @@
         <div class="bg_left">
             <div class="w_img">
                 <a href="#">
-                    <img src="img/woman_left.jpg" />
+                    <img src="{% static 'img/woman_left.jpg' %}">
                     <div class="info">
                         <span>秋装新品热销</span>
                     </div>
@@ -424,25 +457,27 @@
         </div>
         <!-----    bg_middle   ----->
         <div class="bg_middle">
-            <a href="#"><img src="img/woman_bg1.jpg" class="woman_1" /></a>
-            <a href="#"><img src="img/woman_rightTop.jpg" class="woman_2" /></a>
-            <a href="#"><img src="img/woman_rightBottom.jpg" class="woman_3" /></a>
+            <a href="#"><img src="{% static 'img/woman_bg1.jpg' %}" class="woman_1"></a>
+            <a href="#"><img src="{% static 'img/woman_rightTop.jpg' %}" class="woman_2"></a>
+            <a href="#"><img src="{% static 'img/woman_rightBottom.jpg' %}" class="woman_3"></a>
         </div>
         <!-----    bg_right   ----->
         <div class="bg_right">
             <h4>热销排行榜</h4>
             <ul>
                 <li>
-                    <h5><span class="num1"></span>2016韩版女装秋装新款</h5>
-                    <ul class="hot_con">
+                    <h5 style="display: none;"><span class="num1"></span>2016韩版女装秋装新款</h5>
+                    <ul class="hot_con" style="display: block;">
                         <li class="hot_img">
-                            <a href="#"><img src="img/hot_right1.jpg" /></a>
+                            <a href="#"><img src="{% static 'img/hot_right1.jpg' %}"></a>
                             <em class="arrow">1</em>
                         </li>
                         <li class="hot_info">
                             <p><a href="#">2016韩版女装秋装新款</a></p>
                             <p><a href="#" class="hot_new_price">￥168.00</a></p>
-                            <p><del class="hot_old_price">￥298.00</del></p>
+                            <p>
+                                <del class="hot_old_price">￥298.00</del>
+                            </p>
                             <p><a href="#">已售出787笔</a></p>
                         </li>
                     </ul>
@@ -451,13 +486,15 @@
                     <h5><span class="num2"></span>2016韩版女秋新印花图</h5>
                     <ul class="hot_con">
                         <li class="hot_img">
-                            <a href="#"><img src="img/hot_right2.jpg" /></a>
+                            <a href="#"><img src="{% static 'img/hot_right2.jpg' %}"></a>
                             <em class="arrow">2</em>
                         </li>
                         <li class="hot_info">
                             <p><a href="#">2016韩版女秋新印花图</a></p>
                             <p><a href="#" class="hot_new_price">￥192.00</a></p>
-                            <p><del class="hot_old_price">￥298.00</del></p>
+                            <p>
+                                <del class="hot_old_price">￥298.00</del>
+                            </p>
                             <p><a href="#">已售出780笔</a></p>
                         </li>
                     </ul>
@@ -466,13 +503,15 @@
                     <h5><span class="num3"></span>2016韩版女装秋装新款</h5>
                     <ul class="hot_con">
                         <li class="hot_img">
-                            <a href="#"><img src="img/hot_right3.jpg" /></a>
+                            <a href="#"><img src="{% static 'img/hot_right3.jpg' %}"></a>
                             <em class="arrow">3</em>
                         </li>
                         <li class="hot_info">
                             <p><a href="#">2016韩版女装秋装新款</a></p>
                             <p><a href="#" class="hot_new_price">￥148.00</a></p>
-                            <p><del class="hot_old_price">￥298.00</del></p>
+                            <p>
+                                <del class="hot_old_price">￥298.00</del>
+                            </p>
                             <p><a href="#">已售出778笔</a></p>
                         </li>
                     </ul>
@@ -481,13 +520,15 @@
                     <h5><span class="num4"></span>2016秋新款条纹衬衫PC</h5>
                     <ul class="hot_con">
                         <li class="hot_img">
-                            <a href="#"><img src="img/hot_right4.jpg" /></a>
+                            <a href="#"><img src="{% static 'img/hot_right4.jpg' %}"></a>
                             <em class="arrow">4</em>
                         </li>
                         <li class="hot_info">
                             <p><a href="#">2016秋新款条纹衬衫PC</a></p>
                             <p><a href="#" class="hot_new_price">￥136.00</a></p>
-                            <p><del class="hot_old_price">￥268.00</del></p>
+                            <p>
+                                <del class="hot_old_price">￥268.00</del>
+                            </p>
                             <p><a href="#">已售出774笔</a></p>
                         </li>
                     </ul>
@@ -496,13 +537,15 @@
                     <h5><span class="num5"></span>2016韩版女秋装新款条</h5>
                     <ul class="hot_con">
                         <li class="hot_img">
-                            <a href="#"><img src="img/hot_right5.jpg" /></a>
+                            <a href="#"><img src="{% static 'img/hot_right5.jpg' %}"></a>
                             <em class="arrow">5</em>
                         </li>
                         <li class="hot_info">
                             <p><a href="#">2016韩版女秋装新款条</a></p>
                             <p><a href="#" class="hot_new_price">￥179.00</a></p>
-                            <p><del class="hot_old_price">￥298.00</del></p>
+                            <p>
+                                <del class="hot_old_price">￥298.00</del>
+                            </p>
                             <p><a href="#">已售出762笔</a></p>
                         </li>
                     </ul>
@@ -511,13 +554,15 @@
                     <h5><span class="num6"></span>2016韩版女秋新款修身</h5>
                     <ul class="hot_con">
                         <li class="hot_img">
-                            <a href="#"><img src="img/hot_right6.jpg" /></a>
+                            <a href="#"><img src="{% static 'img/hot_right6.jpg' %}"></a>
                             <em class="arrow">6</em>
                         </li>
                         <li class="hot_info">
                             <p><a href="#">2016韩版女秋新款修身</a></p>
                             <p><a href="#" class="hot_new_price">￥176.00</a></p>
-                            <p><del class="hot_old_price">￥308.00</del></p>
+                            <p>
+                                <del class="hot_old_price">￥308.00</del>
+                            </p>
                             <p><a href="#">已售出753笔</a></p>
                         </li>
                     </ul>
@@ -526,13 +571,15 @@
                     <h5><span class="num7"></span>2016韩版女装秋装新宽</h5>
                     <ul class="hot_con">
                         <li class="hot_img">
-                            <a href="#"><img src="img/hot_right7.jpg" /></a>
+                            <a href="#"><img src="{% static 'img/hot_right7.jpg' %}"></a>
                             <em class="arrow">7</em>
                         </li>
                         <li class="hot_info">
                             <p><a href="#">2016韩版女装秋装新宽</a></p>
                             <p><a href="#" class="hot_new_price">￥136.00</a></p>
-                            <p><del class="hot_old_price">￥238.00</del></p>
+                            <p>
+                                <del class="hot_old_price">￥238.00</del>
+                            </p>
                             <p><a href="#">已售出725笔</a></p>
                         </li>
                     </ul>
@@ -542,29 +589,31 @@
                     <h5><span class="num8"></span>2016韩版女装秋装新修</h5>
                     <ul class="hot_con">
                         <li class="hot_img">
-                            <a href="#"><img src="img/hot_right8.jpg" /></a>
+                            <a href="#"><img src="{% static 'img/hot_right8.jpg' %}"></a>
                             <em class="arrow">8</em>
                         </li>
                         <li class="hot_info">
                             <p><a href="#">2016韩版女装秋装新修</a></p>
                             <p><a href="#" class="hot_new_price">￥148.00</a></p>
-                            <p><del class="hot_old_price">￥258.00</del></p>
+                            <p>
+                                <del class="hot_old_price">￥258.00</del>
+                            </p>
                             <p><a href="#">已售出739笔</a></p>
                         </li>
                     </ul>
                 </li>
             </ul>
         </div>
-        </div>
+    </div>
 
     <!---  商品 --->
     <ul class="tab_con">
         <li class="new_boxs">
-            <a href="#"><img src="img/woman_1.jpg" alt="..."/></a>
+            <a href="#"><img src="{% static 'img/woman_1.jpg' %}" alt="..."></a>
             <ul>
                 <li class="price">
                     <span class="new_price">
-                        <span  class="arrow">￥</span>
+                        <span class="arrow">￥</span>
                         148.00
                     </span>
                     <del class="old_price">￥288.00</del>
@@ -575,11 +624,11 @@
             </ul>
         </li>
         <li class="new_boxs">
-            <a href="#"><img src="img/woman_2.jpg" alt="..."/></a>
+            <a href="#"><img src="{% static 'img/woman_2.jpg' %}" alt="..."></a>
             <ul>
                 <li class="price">
                     <span class="new_price">
-                        <span  class="arrow">￥</span>
+                        <span class="arrow">￥</span>
                         112.00
                     </span>
                     <del class="old_price">￥288.00</del>
@@ -590,11 +639,11 @@
             </ul>
         </li>
         <li class="new_boxs">
-            <a href="#"><img src="img/woman_3.jpg" alt="..."/></a>
+            <a href="#"><img src="{% static 'img/woman_3.jpg' %}" alt="..."></a>
             <ul>
                 <li class="price">
                     <span class="new_price">
-                        <span  class="arrow">￥</span>
+                        <span class="arrow">￥</span>
                         98.00
                     </span>
                     <del class="old_price">￥188.00</del>
@@ -605,11 +654,11 @@
             </ul>
         </li>
         <li class="new_boxs">
-            <a href="#"><img src="img/woman_4.jpg" alt="..."/></a>
+            <a href="#"><img src="{% static 'img/woman_4.jpg' %}" alt="..."></a>
             <ul>
                 <li class="price">
                     <span class="new_price">
-                        <span  class="arrow">￥</span>
+                        <span class="arrow">￥</span>
                         188.00
                     </span>
                     <del class="old_price">￥288.00</del>
@@ -620,11 +669,11 @@
             </ul>
         </li>
         <li class="new_boxs">
-            <a href="#"><img src="img/woman_5.jpg" alt="..."/></a>
+            <a href="#"><img src="{% static 'img/woman_5.jpg' %}" alt="..."></a>
             <ul>
                 <li class="price">
                     <span class="new_price">
-                        <span  class="arrow">￥</span>
+                        <span class="arrow">￥</span>
                         188.00
                     </span>
                     <del class="old_price">￥308.00</del>
@@ -638,11 +687,11 @@
     <!---  商品 --->
     <ul class="tab_con">
         <li class="new_boxs">
-            <a href="#"><img src="img/woman_11.jpg" alt="..."/></a>
+            <a href="#"><img src="{% static 'img/woman_11.jpg' %}" alt="..."></a>
             <ul>
                 <li class="price">
                     <span class="new_price">
-                        <span  class="arrow">￥</span>
+                        <span class="arrow">￥</span>
                         148.00
                     </span>
                     <del class="old_price">￥288.00</del>
@@ -653,11 +702,11 @@
             </ul>
         </li>
         <li class="new_boxs">
-            <a href="#"><img src="img/woman_22.jpg" alt="..."/></a>
+            <a href="#"><img src="{% static 'img/woman_22.jpg' %}" alt="..."></a>
             <ul>
                 <li class="price">
                     <span class="new_price">
-                        <span  class="arrow">￥</span>
+                        <span class="arrow">￥</span>
                         112.00
                     </span>
                     <del class="old_price">￥288.00</del>
@@ -668,11 +717,11 @@
             </ul>
         </li>
         <li class="new_boxs">
-            <a href="#"><img src="img/woman_33.jpg" alt="..."/></a>
+            <a href="#"><img src="{% static 'img/woman_33.jpg' %}" alt="..."></a>
             <ul>
                 <li class="price">
                     <span class="new_price">
-                        <span  class="arrow">￥</span>
+                        <span class="arrow">￥</span>
                         98.00
                     </span>
                     <del class="old_price">￥188.00</del>
@@ -683,11 +732,11 @@
             </ul>
         </li>
         <li class="new_boxs">
-            <a href="#"><img src="img/woman_44.jpg" alt="..."/></a>
+            <a href="#"><img src="{% static 'img/woman_44.jpg' %}" alt="..."></a>
             <ul>
                 <li class="price">
                     <span class="new_price">
-                        <span  class="arrow">￥</span>
+                        <span class="arrow">￥</span>
                         188.00
                     </span>
                     <del class="old_price">￥288.00</del>
@@ -698,11 +747,11 @@
             </ul>
         </li>
         <li class="new_boxs">
-            <a href="#"><img src="img/woman_55.jpg" alt="..."/></a>
+            <a href="#"><img src="{% static 'img/woman_55.jpg' %}" alt="..."></a>
             <ul>
                 <li class="price">
                     <span class="new_price">
-                        <span  class="arrow">￥</span>
+                        <span class="arrow">￥</span>
                         188.00
                     </span>
                     <del class="old_price">￥308.00</del>
@@ -728,7 +777,7 @@
             <a href="#">连衣裙</a>
             <a href="#">牛仔裤</a>
             <a href="#">休闲裤</a>
-            <a href="#">更多<img src="imgs/leftjt.png" /></a>
+            <a href="#">更多<img src="{% static 'imgs/leftjt.png' %}"></a>
         </div>
     </h1>
     <div class="bg_con">
@@ -736,7 +785,7 @@
         <div class="bg_left">
             <div class="w_img">
                 <a href="#">
-                    <img src="img/man_left.jpg" />
+                    <img src="{% static 'img/man_left.jpg' %}">
                     <div class="info">
                         <span>秋装新品</span>
                     </div>
@@ -761,23 +810,23 @@
         </div>
         <!-----    bg_middle   ----->
         <div class="bg_middle">
-            <a href="#"><img src="img/bg_3.jpg" class="woman_1" /></a>
+            <a href="#"><img src="{% static 'img/bg_3.jpg' %}" class="woman_1"></a>
         </div>
         <!-----    bg_right   ----->
         <div class="bg_right1">
-            <a href="#"><img src="img/man_rightTop.jpg" class="hstyle_top" /></a>
-            <a href="#"><img src="img/man_rightBottom.jpg" class="hstyle_bottom" /></a>
+            <a href="#"><img src="{% static 'img/man_rightTop.jpg' %}" class="hstyle_top"></a>
+            <a href="#"><img src="{% static 'img/man_rightBottom.jpg' %}" class="hstyle_bottom"></a>
         </div>
     </div>
 
     <!---  商品 --->
     <ul class="tab_con">
         <li class="new_boxs">
-            <a href="#"><img src="img/man_1.jpg" alt="..."/></a>
+            <a href="#"><img src="{% static 'img/man_1.jpg' %}" alt="..."></a>
             <ul>
                 <li class="price">
                     <span class="new_price">
-                        <span  class="arrow">￥</span>
+                        <span class="arrow">￥</span>
                         148.00
                     </span>
                     <del class="old_price">￥288.00</del>
@@ -788,11 +837,11 @@
             </ul>
         </li>
         <li class="new_boxs">
-            <a href="#"><img src="img/man_2.jpg" alt="..."/></a>
+            <a href="#"><img src="{% static 'img/man_2.jpg' %}" alt="..."></a>
             <ul>
                 <li class="price">
                     <span class="new_price">
-                        <span  class="arrow">￥</span>
+                        <span class="arrow">￥</span>
                         112.00
                     </span>
                     <del class="old_price">￥288.00</del>
@@ -803,11 +852,11 @@
             </ul>
         </li>
         <li class="new_boxs">
-            <a href="#"><img src="img/man_3.jpg" alt="..."/></a>
+            <a href="#"><img src="{% static 'img/man_3.jpg' %}" alt="..."></a>
             <ul>
                 <li class="price">
                     <span class="new_price">
-                        <span  class="arrow">￥</span>
+                        <span class="arrow">￥</span>
                         98.00
                     </span>
                     <del class="old_price">￥188.00</del>
@@ -818,11 +867,11 @@
             </ul>
         </li>
         <li class="new_boxs">
-            <a href="#"><img src="img/man_4.jpg" alt="..."/></a>
+            <a href="#"><img src="{% static 'img/man_4.jpg' %}" alt="..."></a>
             <ul>
                 <li class="price">
                     <span class="new_price">
-                        <span  class="arrow">￥</span>
+                        <span class="arrow">￥</span>
                         188.00
                     </span>
                     <del class="old_price">￥288.00</del>
@@ -833,11 +882,11 @@
             </ul>
         </li>
         <li class="new_boxs">
-            <a href="#"><img src="img/man_5.jpg" alt="..."/></a>
+            <a href="#"><img src="{% static 'img/man_5.jpg' %}" alt="..."></a>
             <ul>
                 <li class="price">
                     <span class="new_price">
-                        <span  class="arrow">￥</span>
+                        <span class="arrow">￥</span>
                         188.00
                     </span>
                     <del class="old_price">￥308.00</del>
@@ -862,7 +911,7 @@
             <a href="#">套装</a>
             <a href="#">裙装</a>
             <a href="#">裤装</a>
-            <a href="#">更多<img src="imgs/leftjt.png" /></a>
+            <a href="#">更多<img src="{% static 'imgs/leftjt.png' %}"></a>
         </div>
     </h1>
     <div class="bg_con">
@@ -870,7 +919,7 @@
         <div class="bg_left">
             <div class="w_img">
                 <a href="#">
-                    <img src="img/mom_left.jpg" />
+                    <img src="{% static 'img/mom_left.jpg' %}">
                     <div class="info">
                         <span>秋装新品</span>
                     </div>
@@ -895,23 +944,23 @@
         </div>
         <!-----    bg_middle   ----->
         <div class="bg_middle">
-            <a href="#"><img src="img/mom_bg1.jpg" class="woman_1" /></a>
+            <a href="#"><img src="{% static 'img/mom_bg1.jpg' %}" class="woman_1"></a>
         </div>
         <!-----    bg_right   ----->
         <div class="bg_right1">
-            <a href="#"><img src="img/mom_rightTop.jpg" class="hstyle_top" /></a>
-            <a href="#"><img src="img/mom_rightBottom.jpg" class="hstyle_bottom" /></a>
+            <a href="#"><img src="{% static 'img/mom_rightTop.jpg' %}" class="hstyle_top"></a>
+            <a href="#"><img src="{% static 'img/mom_rightBottom.jpg' %}" class="hstyle_bottom"></a>
         </div>
     </div>
 
     <!---  商品 --->
     <ul class="tab_con">
         <li class="new_boxs">
-            <a href="#"><img src="img/mom_01.jpg" alt="..."/></a>
+            <a href="#"><img src="{% static 'img/mom_01.jpg' %}" alt="..."></a>
             <ul>
                 <li class="price">
                     <span class="new_price">
-                        <span  class="arrow">￥</span>
+                        <span class="arrow">￥</span>
                         148.00
                     </span>
                     <del class="old_price">￥288.00</del>
@@ -922,11 +971,11 @@
             </ul>
         </li>
         <li class="new_boxs">
-            <a href="#"><img src="img/mom_02.jpg" alt="..."/></a>
+            <a href="#"><img src="{% static 'img/mom_02.jpg' %}" alt="..."></a>
             <ul>
                 <li class="price">
                     <span class="new_price">
-                        <span  class="arrow">￥</span>
+                        <span class="arrow">￥</span>
                         112.00
                     </span>
                     <del class="old_price">￥288.00</del>
@@ -937,11 +986,11 @@
             </ul>
         </li>
         <li class="new_boxs">
-            <a href="#"><img src="img/mom_03.jpg" alt="..."/></a>
+            <a href="#"><img src="{% static 'img/mom_03.jpg' %}" alt="..."></a>
             <ul>
                 <li class="price">
                     <span class="new_price">
-                        <span  class="arrow">￥</span>
+                        <span class="arrow">￥</span>
                         98.00
                     </span>
                     <del class="old_price">￥188.00</del>
@@ -952,11 +1001,11 @@
             </ul>
         </li>
         <li class="new_boxs">
-            <a href="#"><img src="img/mom_04.jpg" alt="..."/></a>
+            <a href="#"><img src="{% static 'img/mom_04.jpg' %}" alt="..."></a>
             <ul>
                 <li class="price">
                     <span class="new_price">
-                        <span  class="arrow">￥</span>
+                        <span class="arrow">￥</span>
                         188.00
                     </span>
                     <del class="old_price">￥288.00</del>
@@ -967,11 +1016,11 @@
             </ul>
         </li>
         <li class="new_boxs">
-            <a href="#"><img src="img/mom_01.jpg" alt="..."/></a>
+            <a href="#"><img src="{% static 'img/mom_01.jpg' %}" alt="..."></a>
             <ul>
                 <li class="price">
                     <span class="new_price">
-                        <span  class="arrow">￥</span>
+                        <span class="arrow">￥</span>
                         188.00
                     </span>
                     <del class="old_price">￥308.00</del>
@@ -994,7 +1043,7 @@
             <a href="#">套装</a>
             <a href="#">裙装</a>
             <a href="#">裤装</a>
-            <a href="#">更多<img src="imgs/leftjt.png" /></a>
+            <a href="#">更多<img src="{% static 'imgs/leftjt.png' %}"></a>
         </div>
     </h1>
     <div class="bg_con">
@@ -1002,7 +1051,7 @@
         <div class="bg_left">
             <div class="w_img">
                 <a href="#">
-                    <img src="img/girl_left.jpg" />
+                    <img src="{% static 'img/girl_left.jpg' %}">
                     <div class="info">
                         <span>秋装新品</span>
                     </div>
@@ -1027,24 +1076,24 @@
         </div>
         <!-----    bg_middle   ----->
         <div class="bg_middle">
-            <a href="#"><img src="img/girls_bg1.jpg" class="woman_1" /></a>
+            <a href="#"><img src="{% static 'img/girls_bg1.jpg' %}" class="woman_1"></a>
         </div>
         <!-----    bg_right   ----->
         <div class="bg_right1">
-            <a href="#"><img src="img/girl_right1.jpg" class="hstyle_top1" /></a>
-            <a href="#"><img src="img/girl_right2.jpg" class="hstyle_middle1" /></a>
-            <a href="#"><img src="img/girl_right3.jpg" class="hstyle_bottom1" /></a>
+            <a href="#"><img src="{% static 'img/girl_right1.jpg' %}" class="hstyle_top1"></a>
+            <a href="#"><img src="{% static 'img/girl_right2.jpg' %}" class="hstyle_middle1"></a>
+            <a href="#"><img src="{% static 'img/girl_right3.jpg' %}" class="hstyle_bottom1"></a>
         </div>
     </div>
 
     <!---  商品 --->
     <ul class="tab_con">
         <li class="new_boxs">
-            <a href="#"><img src="img/girl_1.jpg" alt="..."/></a>
+            <a href="#"><img src="{% static 'img/girl_1.jpg' %}" alt="..."></a>
             <ul>
                 <li class="price">
                     <span class="new_price">
-                        <span  class="arrow">￥</span>
+                        <span class="arrow">￥</span>
                         148.00
                     </span>
                     <del class="old_price">￥288.00</del>
@@ -1055,11 +1104,11 @@
             </ul>
         </li>
         <li class="new_boxs">
-            <a href="#"><img src="img/girl_2.jpg" alt="..."/></a>
+            <a href="#"><img src="{% static 'img/girl_2.jpg' %}" alt="..."></a>
             <ul>
                 <li class="price">
                     <span class="new_price">
-                        <span  class="arrow">￥</span>
+                        <span class="arrow">￥</span>
                         112.00
                     </span>
                     <del class="old_price">￥288.00</del>
@@ -1070,11 +1119,11 @@
             </ul>
         </li>
         <li class="new_boxs">
-            <a href="#"><img src="img/girl_3.jpg" alt="..."/></a>
+            <a href="#"><img src="{% static 'img/girl_3.jpg' %}" alt="..."></a>
             <ul>
                 <li class="price">
                     <span class="new_price">
-                        <span  class="arrow">￥</span>
+                        <span class="arrow">￥</span>
                         98.00
                     </span>
                     <del class="old_price">￥188.00</del>
@@ -1085,11 +1134,11 @@
             </ul>
         </li>
         <li class="new_boxs">
-            <a href="#"><img src="img/girl_4.jpg" alt="..."/></a>
+            <a href="#"><img src="{% static 'img/girl_4.jpg' %}" alt="..."></a>
             <ul>
                 <li class="price">
                     <span class="new_price">
-                        <span  class="arrow">￥</span>
+                        <span class="arrow">￥</span>
                         188.00
                     </span>
                     <del class="old_price">￥288.00</del>
@@ -1100,11 +1149,11 @@
             </ul>
         </li>
         <li class="new_boxs">
-            <a href="#"><img src="img/girl_5.jpg" alt="..."/></a>
+            <a href="#"><img src="{% static 'img/girl_5.jpg' %}" alt="..."></a>
             <ul>
                 <li class="price">
                     <span class="new_price">
-                        <span  class="arrow">￥</span>
+                        <span class="arrow">￥</span>
                         188.00
                     </span>
                     <del class="old_price">￥308.00</del>
@@ -1128,7 +1177,7 @@
             <a href="#">套装</a>
             <a href="#">裙装</a>
             <a href="#">裤装</a>
-            <a href="#">更多<img src="imgs/leftjt.png" /></a>
+            <a href="#">更多<img src="{% static 'imgs/leftjt.png' %}"></a>
         </div>
     </h1>
     <div class="bg_con">
@@ -1136,7 +1185,7 @@
         <div class="bg_left">
             <div class="w_img">
                 <a href="#">
-                    <img src="img/child_left.jpg" />
+                    <img src="{% static 'img/child_left.jpg' %}">
                     <div class="info">
                         <span>秋装新品</span>
                     </div>
@@ -1161,23 +1210,23 @@
         </div>
         <!-----    bg_middle   ----->
         <div class="bg_middle">
-            <a href="#"><img src="img/child_bg1.jpg" class="woman_1" /></a>
+            <a href="#"><img src="{% static 'img/child_bg1.jpg' %}" class="woman_1"></a>
         </div>
         <!-----    bg_right   ----->
         <div class="bg_right1">
-            <a href="#"><img src="img/child_right1.jpg" class="hstyle_top" /></a>
-            <a href="#"><img src="img/child_right2.jpg" class="hstyle_bottom" /></a>
+            <a href="#"><img src="{% static 'img/child_right1.jpg' %}" class="hstyle_top"></a>
+            <a href="#"><img src="{% static 'img/child_right2.jpg' %}" class="hstyle_bottom"></a>
         </div>
     </div>
 
     <!---  商品 --->
     <ul class="tab_con">
         <li class="new_boxs">
-            <a href="#"><img src="img/child_01.jpg" alt="..."/></a>
+            <a href="#"><img src="{% static 'img/child_01.jpg' %}" alt="..."></a>
             <ul>
                 <li class="price">
                     <span class="new_price">
-                        <span  class="arrow">￥</span>
+                        <span class="arrow">￥</span>
                         148.00
                     </span>
                     <del class="old_price">￥288.00</del>
@@ -1188,11 +1237,11 @@
             </ul>
         </li>
         <li class="new_boxs">
-            <a href="#"><img src="img/child_02.jpg" alt="..."/></a>
+            <a href="#"><img src="{% static 'img/child_02.jpg' %}" alt="..."></a>
             <ul>
                 <li class="price">
                     <span class="new_price">
-                        <span  class="arrow">￥</span>
+                        <span class="arrow">￥</span>
                         112.00
                     </span>
                     <del class="old_price">￥288.00</del>
@@ -1203,11 +1252,11 @@
             </ul>
         </li>
         <li class="new_boxs">
-            <a href="#"><img src="img/child_03.jpg" alt="..."/></a>
+            <a href="#"><img src="{% static 'img/child_03.jpg' %}" alt="..."></a>
             <ul>
                 <li class="price">
                     <span class="new_price">
-                        <span  class="arrow">￥</span>
+                        <span class="arrow">￥</span>
                         98.00
                     </span>
                     <del class="old_price">￥188.00</del>
@@ -1218,11 +1267,11 @@
             </ul>
         </li>
         <li class="new_boxs">
-            <a href="#"><img src="img/child_04.jpg" alt="..."/></a>
+            <a href="#"><img src="{% static 'img/child_04.jpg' %}" alt="..."></a>
             <ul>
                 <li class="price">
                     <span class="new_price">
-                        <span  class="arrow">￥</span>
+                        <span class="arrow">￥</span>
                         188.00
                     </span>
                     <del class="old_price">￥288.00</del>
@@ -1233,11 +1282,11 @@
             </ul>
         </li>
         <li class="new_boxs">
-            <a href="#"><img src="img/child_05.jpg" alt="..."/></a>
+            <a href="#"><img src="{% static 'img/child_05.jpg' %}" alt="..."></a>
             <ul>
                 <li class="price">
                     <span class="new_price">
-                        <span  class="arrow">￥</span>
+                        <span class="arrow">￥</span>
                         188.00
                     </span>
                     <del class="old_price">￥308.00</del>
@@ -1262,7 +1311,7 @@
             <a href="#">套装</a>
             <a href="#">裙装</a>
             <a href="#">裤装</a>
-            <a href="#">更多<img src="imgs/leftjt.png" /></a>
+            <a href="#">更多<img src="{% static 'imgs/leftjt.png' %}"></a>
         </div>
     </h1>
     <div class="bg_con">
@@ -1270,7 +1319,7 @@
         <div class="bg_left">
             <div class="w_img">
                 <a href="#">
-                    <img src="img/fashion_left.jpg" />
+                    <img src="{% static 'img/fashion_left.jpg' %}">
                     <div class="info">
                         <span>秋装新品</span>
                     </div>
@@ -1295,22 +1344,22 @@
         </div>
         <!-----    bg_middle   ----->
         <div class="bg_middle">
-            <a href="#"><img src="img/fashion_bg1.jpg" class="woman_1" /></a>
+            <a href="#"><img src="{% static 'img/fashion_bg1.jpg' %}" class="woman_1"></a>
         </div>
         <!-----    bg_right   ----->
         <div class="bg_right1">
-            <a href="#"><img src="img/fashion_right1.jpg" class="hstyle_top2" /></a>
+            <a href="#"><img src="{% static 'img/fashion_right1.jpg' %}" class="hstyle_top2"></a>
         </div>
     </div>
 
     <!---  商品 --->
     <ul class="tab_con">
         <li class="new_boxs">
-            <a href="#"><img src="img/fashion_01.jpg" alt="..."/></a>
+            <a href="#"><img src="{% static 'img/fashion_01.jpg' %}" alt="..."></a>
             <ul>
                 <li class="price">
                     <span class="new_price">
-                        <span  class="arrow">￥</span>
+                        <span class="arrow">￥</span>
                         148.00
                     </span>
                     <del class="old_price">￥288.00</del>
@@ -1321,11 +1370,11 @@
             </ul>
         </li>
         <li class="new_boxs">
-            <a href="#"><img src="img/fashion_02.jpg" alt="..."/></a>
+            <a href="#"><img src="{% static 'img/fashion_02.jpg' %}" alt="..."></a>
             <ul>
                 <li class="price">
                     <span class="new_price">
-                        <span  class="arrow">￥</span>
+                        <span class="arrow">￥</span>
                         112.00
                     </span>
                     <del class="old_price">￥288.00</del>
@@ -1336,11 +1385,11 @@
             </ul>
         </li>
         <li class="new_boxs">
-            <a href="#"><img src="img/fashion_03.jpg" alt="..."/></a>
+            <a href="#"><img src="{% static 'img/fashion_03.jpg' %}" alt="..."></a>
             <ul>
                 <li class="price">
                     <span class="new_price">
-                        <span  class="arrow">￥</span>
+                        <span class="arrow">￥</span>
                         98.00
                     </span>
                     <del class="old_price">￥188.00</del>
@@ -1351,11 +1400,11 @@
             </ul>
         </li>
         <li class="new_boxs">
-            <a href="#"><img src="img/fashion_04.jpg" alt="..."/></a>
+            <a href="#"><img src="{% static 'img/fashion_04.jpg' %}" alt="..."></a>
             <ul>
                 <li class="price">
                     <span class="new_price">
-                        <span  class="arrow">￥</span>
+                        <span class="arrow">￥</span>
                         188.00
                     </span>
                     <del class="old_price">￥288.00</del>
@@ -1366,11 +1415,11 @@
             </ul>
         </li>
         <li class="new_boxs">
-            <a href="#"><img src="img/fashion_05.jpg" alt="..."/></a>
+            <a href="#"><img src="{% static 'img/fashion_05.jpg' %}" alt="..."></a>
             <ul>
                 <li class="price">
                     <span class="new_price">
-                        <span  class="arrow">￥</span>
+                        <span class="arrow">￥</span>
                         188.00
                     </span>
                     <del class="old_price">￥308.00</del>
@@ -1386,7 +1435,7 @@
 
 <!-------------   2016秋装新品发布    -------------->
 <div id="banner">
-    <a href="#" class="banner1"><img src="img/new_goods.jpg" /></a>
+    <a href="#" class="banner1"><img src="{% static 'img/new_goods.jpg' %}"></a>
 </div>
 
 
@@ -1394,11 +1443,11 @@
 <div id="news">
     <div class="news_list">
         <a href="#"><h2>韩都资讯</h2></a>
-        <a href="#" class="more">更多 ></a>
+        <a href="#" class="more">更多 &gt;</a>
     </div>
     <!--  news_left -->
     <div class="news_left">
-        <a href="#" class="news_pic"><img src="img/news_left.jpg" /></a>
+        <a href="#" class="news_pic"><img src="{% static 'img/news_left.jpg' %}"></a>
         <p class="news_words">【韩都公益】无穷花开<span class="bold"></span></p>
     </div>
     <div class="news_middle">
@@ -1412,7 +1461,7 @@
                 <h4><a href="#">在韩国首创时尚大赛，韩都衣舍又创新纪录</a></h4>
                 <p>8月12日，韩都衣舍2016韩国时尚设计师大赛成功举办，在到场的200多位重量级嘉宾</p>
             </li>
-            <a class="new_fashionPic" href="#"><img src="imgs/news_fashion.jpg" /></a>
+            <a class="new_fashionPic" href="#"><img src="{% static 'imgs/news_fashion.jpg' %}"></a>
             <ul>
                 <li><a href="#">韩都衣舍用行动否定电商平台</a></li>
                 <li><a href="#">韩都衣舍用行动否定电商平台</a></li>
@@ -1422,7 +1471,7 @@
 
     <div class="news_right">
         <div class="dy">
-            <input type="text" />
+            <input type="text">
             <button></button>
         </div>
     </div>
@@ -1507,24 +1556,24 @@
 
     <div id="copyright">
         <p style="font-size: 12px;margin-left: 130px">
-            <img src="imgs/copyright.gif" alt="图片无法加载，请稍候..." width="33" height="37" align="center"/>
+            <img src="{% static 'imgs/copyright.gif' %}" alt="图片无法加载，请稍候..." width="33" height="37" align="middle">
             鲁ICP备14003322号-2 © 2006-2015 handu.com All Rights Reserved.
 
             <a href="#" style="display: inline-block;width:200px;height: 20px;line-height: 20px">
-                <img src="imgs/beiantubiao.png"  style="width: 20px;height: 20px;line-height: 20px"/>
+                <img src="{% static 'imgs/beiantubiao.png' %}" style="width: 20px;height: 20px;line-height: 20px">
                 <span style="width:170px;height: 20px;line-height: 20px;color: #939393;">鲁公网安备 37010202000113号</span>
             </a>
             山东韩都衣舍电商集团有限公司，禁止非法复制
         </p>
         <a href="#" style="position: absolute;right: 130px;top: 10px;">
-            <img src="imgs/pic.gif" />
+            <img src="{% static 'imgs/pic.gif' %}">
         </a>
 
         <p class="pic" style="text-align: center;">
-            <img src="imgs/zxmbutton02_sy.jpg" />
-            <a href="#"><img src="imgs/zxmbutton05_sy.jpg" /> </a>
-            <a href="#"><img src="imgs/cnnic.png" /> </a>
-            <a href="#"><img src="imgs/cctv.png" /> </a>
+            <img src="{% static 'imgs/zxmbutton02_sy.jpg' %}">
+            <a href="#"><img src="{% static 'imgs/zxmbutton05_sy.jpg' %}"> </a>
+            <a href="#"><img src="{% static 'imgs/cnnic.png' %}"> </a>
+            <a href="#"><img src="{% static 'imgs/cctv.png' %}"> </a>
         </p>
 
     </div>
@@ -1532,28 +1581,28 @@
     <div class="friendlink">
         <span style=" float:left; width:60px;position:absolute;font-size: 12px">友情链接：</span>
         <div style="width: 1140px;position: relative;float:right;overflow: hidden">
-                <ul class="carousel" id="carousel">
-                    <li><a href="#" target="_blank">女装批发网</a></li>
-                    <li><a href="#" target="_blank">照片书</a></li>
-                    <li><a href="#" target="_blank">优品惠</a></li>
-                    <li><a href="#" target="_blank">广州分类信息</a></li>
-                    <li><a href="#" target="_blank">四季青服装网</a></li>
-                    <li><a href="#" target="_blank">优惠券</a></li>
-                    <li><a href="#" target="_blank">虎扑识货</a></li>
-                    <li><a href="#" target="_blank">手表品牌大全</a></li>
-                    <li><a href="#" target="_blank">服装批发拿货</a></li>
-                    <li><a href="#" target="_blank">服装批发网</a></li>
-                    <li><a href="#" target="_blank">网上购物</a></li>
-                    <li><a href="#" target="_blank">淘牛品</a></li>
-                    <li><a href="#" target="_blank">享优惠</a></li>
-                    <li><a href="#" target="_blank">女装批发网</a></li>
-                    <li><a href="#" target="_blank">照片书</a></li>
-                    <li><a href="#" target="_blank">优品惠</a></li>
-                    <li><a href="#" target="_blank">广州分类信息</a></li>
-                    <li><a href="#" target="_blank">四季青服装网</a></li>
-                    <li><a href="#" target="_blank">优惠券</a></li>
-                    <li><a href="#" target="_blank">虎扑识货</a></li>
-                </ul>
+            <ul class="carousel" id="carousel">
+                <li><a href="#" target="_blank">女装批发网</a></li>
+                <li><a href="#" target="_blank">照片书</a></li>
+                <li><a href="#" target="_blank">优品惠</a></li>
+                <li><a href="#" target="_blank">广州分类信息</a></li>
+                <li><a href="#" target="_blank">四季青服装网</a></li>
+                <li><a href="#" target="_blank">优惠券</a></li>
+                <li><a href="#" target="_blank">虎扑识货</a></li>
+                <li><a href="#" target="_blank">手表品牌大全</a></li>
+                <li><a href="#" target="_blank">服装批发拿货</a></li>
+                <li><a href="#" target="_blank">服装批发网</a></li>
+                <li><a href="#" target="_blank">网上购物</a></li>
+                <li><a href="#" target="_blank">淘牛品</a></li>
+                <li><a href="#" target="_blank">享优惠</a></li>
+                <li><a href="#" target="_blank">女装批发网</a></li>
+                <li><a href="#" target="_blank">照片书</a></li>
+                <li><a href="#" target="_blank">优品惠</a></li>
+                <li><a href="#" target="_blank">广州分类信息</a></li>
+                <li><a href="#" target="_blank">四季青服装网</a></li>
+                <li><a href="#" target="_blank">优惠券</a></li>
+                <li><a href="#" target="_blank">虎扑识货</a></li>
+            </ul>
         </div>
 
     </div>
@@ -1569,8 +1618,8 @@
         <li>
             <h3 class="list_H3">
                 <i class="list_1">
-                    <img src="imgs/tb1.png" style="display: block;" />
-                    <img src="imgs/tb01.png" style="display: none" />
+                    <img src="{% static 'imgs/tb1.png' %}" style="display: block;">
+                    <img src="{% static 'imgs/tb01.png' %}" style="display: none">
                 </i>
                 全部商品分类
             </h3>
@@ -1582,8 +1631,8 @@
         <li>
             <h3 class="list_H3">
                 <i class="list_1">
-                    <img src="imgs/tb2.png" style="display: block" />
-                    <img src="imgs/tb02.png" style="display: none" />
+                    <img src="{% static 'imgs/tb2.png' %}" style="display: block">
+                    <img src="{% static 'imgs/tb02.png' %}" style="display: none">
                 </i>
                 精选推荐
             </h3>
@@ -1595,8 +1644,8 @@
         <li>
             <h3 class="list_H3">
                 <i class="list_1">
-                    <img src="imgs/tb3.png" style="display: block" />
-                    <img src="imgs/tb03.png" style="display: none" />
+                    <img src="{% static 'imgs/tb3.png' %}" style="display: block">
+                    <img src="{% static 'imgs/tb03.png' %}" style="display: none">
                 </i>
                 潮流女装
             </h3>
@@ -1608,8 +1657,8 @@
         <li>
             <h3 class="list_H3">
                 <i class="list_1">
-                    <img src="imgs/tb4.png" style="display: block" />
-                    <img src="imgs/tb04.png" style="display: none" />
+                    <img src="{% static 'imgs/tb4.png' %}" style="display: block">
+                    <img src="{% static 'imgs/tb04.png' %}" style="display: none">
                 </i>
                 精品男装
             </h3>
@@ -1621,8 +1670,8 @@
         <li>
             <h3 class="list_H3">
                 <i class="list_1">
-                    <img src="imgs/tb5.png" style="display: block" />
-                    <img src="imgs/tb05.png" style="display: none" />
+                    <img src="{% static 'imgs/tb5.png' %}" style="display: block">
+                    <img src="{% static 'imgs/tb05.png' %}" style="display: none">
                 </i>
                 可爱童装
             </h3>
@@ -1634,8 +1683,8 @@
         <li>
             <h3 class="list_H3">
                 <i class="list_1">
-                    <img src="imgs/tb6.png" style="display: block" />
-                    <img src="imgs/tb06.png" style="display: none" />
+                    <img src="{% static 'imgs/tb6.png' %}" style="display: block">
+                    <img src="{% static 'imgs/tb06.png' %}" style="display: none">
                 </i>
                 时尚妈妈
             </h3>
@@ -1648,8 +1697,8 @@
         <li>
             <h3 class="list_H3">
                 <i class="list_1">
-                    <img src="imgs/tb7.png" style="display: block" />
-                    <img src="imgs/tb07.png" style="display: none" />
+                    <img src="{% static 'imgs/tb7.png' %}" style="display: block">
+                    <img src="{% static 'imgs/tb07.png' %}" style="display: none">
                 </i>
                 鞋包配饰
             </h3>
@@ -1662,24 +1711,24 @@
     <div class="list_right">
         <div class="list_right_1">
             <ul class="list_logo">
-                <li><a href="#"><img src="imgs/nana.png" alt="..."/></a></li>
-                <li><a href="#"><img src="imgs/nibbuns.png" alt="..."/></a></li>
-                <li><a href="#"><img src="imgs/soneed.png" alt="..."/></a></li>
-                <li><a href="#"><img src="imgs/mini.png" alt="..."/></a></li>
-                <li><a href="#"><img src="imgs/hp.png" alt="..."/></a></li>
-                <li><a href="#"><img src="imgs/zc.png" alt="..."/></a></li>
-                <li><a href="#"><img src="imgs/ytxz.png" alt="..."/></a></li>
-                <li><a href="#"><img src="imgs/sulv.png" alt="..."/></a></li>
-                <li><a href="#"><img src="imgs/nana.png" alt="..."/></a></li>
-                <li><a href="#"><img src="imgs/laola.png" alt="..."/></a></li>
-                <li><a href="#"><img src="imgs/hanyunyixiang.png" alt="..."/></a></li>
-                <li><a href="#"><img src="imgs/guoya.png" alt="..."/></a></li>
-                <li><a href="#"><img src="imgs/guoya.png" alt="..."/></a></li>
-                <li><a href="#"><img src="imgs/forqueen.png" alt="..."/></a></li>
-                <li><a href="#"><img src="imgs/dx1.png" alt="..."/></a></li>
-                <li><a href="#"><img src="imgs/anma.png" alt="..."/></a></li>
-                <li><a href="#"><img src="imgs/zc.png" alt="..."/></a></li>
-                <li><a href="#"><img src="imgs/mini.png" alt="..."/></a></li>
+                <li><a href="#"><img src="{% static 'imgs/nana.png' %}" alt="..."></a></li>
+                <li><a href="#"><img src="{% static 'imgs/nibbuns.png' %}" alt="..."></a></li>
+                <li><a href="#"><img src="{% static 'imgs/soneed.png' %}" alt="..."></a></li>
+                <li><a href="#"><img src="{% static 'imgs/mini.png' %}" alt="..."></a></li>
+                <li><a href="#"><img src="{% static 'imgs/hp.png' %}" alt="..."></a></li>
+                <li><a href="#"><img src="{% static 'imgs/zc.png' %}" alt="..."></a></li>
+                <li><a href="#"><img src="{% static 'imgs/ytxz.png' %}" alt="..."></a></li>
+                <li><a href="#"><img src="{% static 'imgs/sulv.png' %}" alt="..."></a></li>
+                <li><a href="#"><img src="{% static 'imgs/nana.png' %}" alt="..."></a></li>
+                <li><a href="#"><img src="{% static 'imgs/laola.png' %}" alt="..."></a></li>
+                <li><a href="#"><img src="{% static 'imgs/hanyunyixiang.png' %}" alt="..."></a></li>
+                <li><a href="#"><img src="{% static 'imgs/guoya.png' %}" alt="..."></a></li>
+                <li><a href="#"><img src="{% static 'imgs/guoya.png' %}" alt="..."></a></li>
+                <li><a href="#"><img src="{% static 'imgs/forqueen.png' %}" alt="..."></a></li>
+                <li><a href="#"><img src="{% static 'imgs/dx1.png' %}" alt="..."></a></li>
+                <li><a href="#"><img src="{% static 'imgs/anma.png' %}" alt="..."></a></li>
+                <li><a href="#"><img src="{% static 'imgs/zc.png' %}" alt="..."></a></li>
+                <li><a href="#"><img src="{% static 'imgs/mini.png' %}" alt="..."></a></li>
             </ul>
         </div>
         <div class="list_right_1">
@@ -1990,16 +2039,16 @@
 <!--------------------     吸 顶    -------------------->
 <div id="fixed_top">
     <div class="fixed_div">
-        <div class="fixed_logo"><img src="imgs/fixed_logo.png" /></div>
+        <div class="fixed_logo"><img src="{% static 'imgs/fixed_logo.png' %}"></div>
         <div class="fixed_search">
-            <input type="text" placeholder="连衣裙" class="text_search" />
-            <input type="submit" value="搜 索" class="text_button" />
+            <input type="text" placeholder="连衣裙" class="text_search">
+            <input type="submit" value="搜 索" class="text_button">
         </div>
         <div class="fixed_words">没空去韩国？就来韩都衣舍！</div>
     </div>
 </div>
 
 
-
+myhome.js:18:5
 </body>
 </html>
